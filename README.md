@@ -1,9 +1,9 @@
-## Lista API FullStack
+# Lista API FullStack
 
-# Sobre o projeto
+## Sobre o projeto
 API para cadastro de itens numa lista de compras, onde o usuário pode cadastrar um item, consultar os itens da lista, atualizar e deletar passando o id 
 como parâmetro e deletar todos os itens da lista.
-# Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - Java
 - Spring Boot
 - JPA / Hibernate
@@ -12,5 +12,5 @@ como parâmetro e deletar todos os itens da lista.
 - HTML
 - Bootstrap
 - Jquery
-# Autor
+## Autor
 Alexandre De Alves Lima
