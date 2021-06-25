@@ -4,7 +4,7 @@ function create() {
         let nome = $('#nome').val();
         let quantidade = $('#quantidade').val();
 
-        $.ajax('http://localhost:8080/itens', {
+        $.ajax('itens', {
             type: 'POST',
             data: JSON.stringify({
                 nome: nome,
@@ -24,7 +24,7 @@ function create() {
 
 function readAll() {
 
-    $.ajax('http://localhost:8080/itens', {
+    $.ajax('itens', {
         type: 'GET',
         success: function (response) {
 
@@ -48,7 +48,7 @@ function readAll() {
 }
 
 function readById(id) {
-    $.ajax(`http://localhost:8080/itens/${id}`, {
+    $.ajax(`itens/${id}`, {
         type: 'GET',
         success: function (response) {
             $("#itemNome").val(response.nome)
@@ -69,7 +69,7 @@ function update() {
         let itemNome = $("#itemNome").val()
         let itemQuantidade = $("#itemQuantidade").val();
 
-        $.ajax(`http://localhost:8080/itens/${itemid}`, {
+        $.ajax(`itens/${itemid}`, {
             type: 'PUT',
             data: JSON.stringify({
                 nome: itemNome,
@@ -93,7 +93,7 @@ function deleteItem(id) {
 
     if (confirm('Deseja delete esse item?')) {
 
-        $.ajax(`http://localhost:8080/itens/${id}`, {
+        $.ajax(`itens/${id}`, {
             type: 'DELETE',
             success: function (response) {
                 alert('Item Deletado com sucesso')
@@ -112,7 +112,7 @@ function deleteAll() {
 
     if (confirm('Deseja deletar a lista?')) {
 
-        $.ajax(`http://localhost:8080/itens`, {
+        $.ajax(`itens`, {
             type: 'DELETE',
             success: function (response) {
                 alert('Lista deletada com sucesso')
