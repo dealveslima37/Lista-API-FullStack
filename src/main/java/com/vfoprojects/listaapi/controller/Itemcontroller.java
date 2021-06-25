@@ -2,6 +2,8 @@ package com.vfoprojects.listaapi.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import com.vfoprojects.listaapi.dto.ItemDTO;
 import com.vfoprojects.listaapi.model.Item;
 import com.vfoprojects.listaapi.service.ItemService;
@@ -26,7 +28,7 @@ public class Itemcontroller {
     private ItemService service;
 
     @PostMapping
-    public ResponseEntity<Item> create(@RequestBody ItemDTO dto) {
+    public ResponseEntity<Item> create(@Valid @RequestBody ItemDTO dto) {
         Item item = service.insert(dto);
         return new ResponseEntity<>(item, HttpStatus.CREATED);
     }
