@@ -34,7 +34,6 @@ function readAll() {
                     <tr>
                         <th scope="row">${response[i].nome}</th>
                         <td>${response[i].quantidade}</td>
-                        <td>${response[i].data}</td>
                         <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" onclick="readById('${response[i].id}')">Editar</button></td>
                         <td><button type="button" class="btn btn-danger" onclick="deleteItem('${response[i].id}')">Deletar</button></td>
                     </tr>
